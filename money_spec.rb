@@ -19,7 +19,7 @@ describe Dollar do
   end
 
   context "等価性" do
-    it { Dollar.new(5).should == Dollar.new(5) }
-    it { Dollar.new(5).should_not == Dollar.new(6) }
+    it("$5 == $5") { Dollar.new(5).should == Dollar.new(5) }
+    it("$5 != $6") { Dollar.new(5).should_not == Dollar.new(6) }
   end
 end

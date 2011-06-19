@@ -16,6 +16,9 @@ describe Dollar do
       product = @five.times(3)
       product.amount.should be(15)
     end
+  end
 
+  context "等価性" do
+    it { Dollar.new(5).should == Dollar.new(5) }
   end
 end

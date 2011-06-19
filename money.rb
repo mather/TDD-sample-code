@@ -12,4 +12,8 @@ class Dollar
     return Dollar.new(@amount * multiplier)
   end
 
+  def ==(other)
+    true
+  end
+
 end

@@ -11,7 +11,7 @@ describe Dollar do
     it "$5 x 2 = $10" do
       @five.times(2).should == Dollar.new(10)
     end
-    it "$5 x 5 = $15" do
+    it "$5 x 3 = $15" do
       @five.times(3).should == Dollar.new(15)
     end
   end

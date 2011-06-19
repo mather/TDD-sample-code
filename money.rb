@@ -5,10 +5,11 @@ class Dollar
   attr_reader :amount
 
   def initialize(amount)
-    @amount = 10
+    @amount = amount
   end
 
-  def times(mutiplier)
+  def times(multiplier)
+    @amount *= multiplier
   end
 
 end

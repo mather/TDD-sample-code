@@ -20,5 +20,6 @@ describe Dollar do
 
   context "等価性" do
     it { Dollar.new(5).should == Dollar.new(5) }
+    it { Dollar.new(5).should_not == Dollar.new(6) }
   end
 end

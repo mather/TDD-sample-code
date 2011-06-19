@@ -9,12 +9,10 @@ describe Dollar do
     end
 
     it "$5 x 2 = $10" do
-      product = @five.times(2)
-      product.amount.should be(10)
+      @five.times(2).should == Dollar.new(10)
     end
     it "$5 x 5 = $15" do
-      product = @five.times(3)
-      product.amount.should be(15)
+      @five.times(3).should == Dollar.new(15)
     end
   end
 

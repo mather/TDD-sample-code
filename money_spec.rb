@@ -21,3 +21,19 @@ describe Dollar do
     it("$5 != $6") { Dollar.new(5).should_not == Dollar.new(6) }
   end
 end
+
+describe Franc do
+  context "積を計算する場合" do
+    before :all do
+      @five = Franc.new(5)
+    end
+
+    it "5 CHF x 2 = 10 CHF" do
+      @five.times(2).should == Franc.new(10)
+    end
+    it "5 CHF x 3 = 15 CHF" do
+      @five.times(3).should == Franc.new(15)
+    end
+  end
+
+end

@@ -14,3 +14,7 @@ h2. TODO
 * -等価性(==)-
 * nilとの等価性?
 * Objectとの等価性
+* 5 CHF x 2 = 10 CHF
+* Dollar と Franc の重複
+* 等価性の一般化
+* timesの一般化

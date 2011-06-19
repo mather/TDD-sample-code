@@ -11,3 +11,6 @@ h2. TODO
 * amount のプライベート化
 * -Dollarの副作用-
 * Moneyの丸め処理
+* -等価性(==)-
+* nilとの等価性?
+* Objectとの等価性

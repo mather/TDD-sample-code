@@ -15,11 +15,6 @@ describe Dollar do
       @five.times(3).should == Dollar.new(15)
     end
   end
-
-  context "等価性" do
-    it("$5 == $5") { Dollar.new(5).should == Dollar.new(5) }
-    it("$5 != $6") { Dollar.new(5).should_not == Dollar.new(6) }
-  end
 end
 
 describe Franc do
@@ -35,5 +30,11 @@ describe Franc do
       @five.times(3).should == Franc.new(15)
     end
   end
+end
 
+describe "等価性" do
+  it("$5 == $5") { Dollar.new(5).should == Dollar.new(5) }
+  it("$5 != $6") { Dollar.new(5).should_not == Dollar.new(6) }
+  it("5 CHF == 5 CHF") { Franc.new(5).should == Franc.new(5) }
+  it("5 CHF != 6 CHF") { Franc.new(5).should_not == Franc.new(6) }
 end

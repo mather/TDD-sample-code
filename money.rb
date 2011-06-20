@@ -1,8 +1,14 @@
 # -*- coding: utf-8 -*-
 
-class Dollar
-
+class Money
   attr_reader :amount
+
+  def ==(other)
+    @amount == other.amount
+  end
+end
+
+class Dollar < Money
 
   def initialize(amount)
     @amount = amount
@@ -12,15 +18,9 @@ class Dollar
     return Dollar.new(@amount * multiplier)
   end
 
-  def ==(other)
-    @amount == other.amount
-  end
-
 end
 
-class Franc
-
-  attr_reader :amount
+class Franc < Money
 
   def initialize(amount)
     @amount = amount
@@ -28,10 +28,6 @@ class Franc
 
   def times(multiplier)
     return Franc.new(@amount * multiplier)
-  end
-
-  def ==(other)
-    @amount == other.amount
   end
 
 end

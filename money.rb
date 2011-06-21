@@ -4,7 +4,7 @@ class Money
   attr_reader :amount
 
   def ==(other)
-    @amount == other.amount
+    self.class == other.class and @amount == other.amount
   end
 end
 

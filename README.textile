@@ -18,4 +18,5 @@ h2. TODO
 * Dollar と Franc の重複
 * -等価性の一般化-
 * timesの一般化
-* FrancとDollarの比較
+* -FrancとDollarの比較-
+* 通貨

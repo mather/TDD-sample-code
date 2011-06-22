@@ -20,3 +20,5 @@ h2. TODO
 * timesの一般化
 * -FrancとDollarの比較-
 * 通貨
+* Francの積の計算を除去
+* (Ruby)クラスメソッド実装を排除

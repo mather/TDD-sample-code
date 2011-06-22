@@ -6,6 +6,10 @@ class Money
   def ==(other)
     self.class == other.class and @amount == other.amount
   end
+
+  def Money.dollar(amount)
+    Dollar.new(amount)
+  end
 end
 
 class Dollar < Money

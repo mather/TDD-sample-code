@@ -5,7 +5,7 @@ require "./money.rb"
 describe Dollar do
   context "積を計算する場合" do
     before :all do
-      @five = Dollar.new(5)
+      @five = Money.dollar(5)
     end
 
     it "$5 x 2 = $10" do

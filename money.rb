@@ -10,6 +10,10 @@ class Money
   def Money.dollar(amount)
     Dollar.new(amount)
   end
+
+  def Money.franc(amount)
+    Franc.new(amount)
+  end
 end
 
 class Dollar < Money

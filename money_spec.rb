@@ -20,7 +20,7 @@ end
 describe Franc do
   context "積を計算する場合" do
     before :all do
-      @five = Franc.new(5)
+      @five = Money.franc(5)
     end
 
     it "5 CHF x 2 = 10 CHF" do

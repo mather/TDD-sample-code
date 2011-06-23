@@ -3,6 +3,11 @@
 class Money
   attr_reader :amount, :currency
 
+  def initialize(amount, currency)
+    @amount = amount
+    @currency = currency
+  end
+
   def ==(other)
     self.class == other.class and @amount == other.amount
   end
@@ -19,8 +24,7 @@ end
 class Dollar < Money
 
   def initialize(amount, currency)
-    @amount = amount
-    @currency = currency
+    super
   end
 
   def times(multiplier)
@@ -32,8 +36,7 @@ end
 class Franc < Money
 
   def initialize(amount, currency)
-    @amount = amount
-    @currency = currency
+    super
   end
 
   def times(multiplier)

@@ -17,31 +17,29 @@ class Money
 end
 
 class Dollar < Money
+  attr_reader :currency
 
   def initialize(amount)
     @amount = amount
+    @currency = "USD"
   end
 
   def times(multiplier)
     return Dollar.new(@amount * multiplier)
   end
 
-  def currency
-    "USD"
-  end
 end
 
 class Franc < Money
+  attr_reader :currency
 
   def initialize(amount)
     @amount = amount
+    @currency = "CHF"
   end
 
   def times(multiplier)
     return Franc.new(@amount * multiplier)
   end
 
-  def currency
-    "CHF"
-  end
 end

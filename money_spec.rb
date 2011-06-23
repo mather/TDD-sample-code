@@ -39,3 +39,8 @@ describe "等価性" do
   it("5 CHF != 6 CHF") { Money.franc(5).should_not == Money.franc(6) }
   it("$5 != 5 CHF") { Money.dollar(5).should_not == Money.franc(5) }
 end
+
+describe "通貨" do
+  it { Money.dollar(1).currency.should == "USD" }
+  it { Money.franc(1).currency.should == "CHF" }
+end

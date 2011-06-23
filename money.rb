@@ -26,6 +26,9 @@ class Dollar < Money
     return Dollar.new(@amount * multiplier)
   end
 
+  def currency
+    "USD"
+  end
 end
 
 class Franc < Money
@@ -38,4 +41,7 @@ class Franc < Money
     return Franc.new(@amount * multiplier)
   end
 
+  def currency
+    "CHF"
+  end
 end

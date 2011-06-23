@@ -12,7 +12,7 @@ class Money
   end
 
   def Money.franc(amount)
-    Franc.new(amount, nil)
+    Franc.new(amount, "CHF")
   end
 end
 
@@ -33,11 +33,11 @@ class Franc < Money
 
   def initialize(amount, currency)
     @amount = amount
-    @currency = "CHF"
+    @currency = currency
   end
 
   def times(multiplier)
-    return Franc.new(@amount * multiplier, nil)
+    return Money.franc(@amount * multiplier)
   end
 
 end

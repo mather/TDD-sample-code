@@ -24,9 +24,10 @@ class Money
     return Money.new(@amount * multiplier, @currency)
   end
 
-end
+  def inspect
+    "#{@amount} #{@currency}(#{self.class})"
+  end
 
-class Dollar < Money
 end
 
 class Franc < Money

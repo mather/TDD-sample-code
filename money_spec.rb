@@ -2,7 +2,7 @@
 
 require "./money.rb"
 
-describe Dollar do
+describe "Dollar" do
   context "積を計算する場合" do
     before :all do
       @five = Money.dollar(5)
@@ -17,7 +17,7 @@ describe Dollar do
   end
 end
 
-describe Franc do
+describe "Franc" do
   context "積を計算する場合" do
     before :all do
       @five = Money.franc(5)

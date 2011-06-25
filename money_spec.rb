@@ -41,6 +41,9 @@ describe "等価性" do
 end
 
 describe "通貨" do
-  it { Money.dollar(1).currency.should == "USD" }
-  it { Money.franc(1).currency.should == "CHF" }
+  it("Dollar's currency is 'USD'") { Money.dollar(1).currency.should == "USD" }
+  it("Franc's currency is 'CHF'") { Money.franc(1).currency.should == "CHF" }
+  it("Franc(after times) is 'CHF'") {
+    Money.franc(1).times(2).currency.should == "CHF"
+  }
 end

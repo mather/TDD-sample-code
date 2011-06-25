@@ -9,7 +9,7 @@ class Money
   end
 
   def ==(other)
-    self.class == other.class and @amount == other.amount
+    self.currency == other.currency and @amount == other.amount
   end
 
   def Money.dollar(amount)
@@ -24,7 +24,7 @@ end
 class Dollar < Money
 
   def times(multiplier)
-    return Money.dollar(@amount * multiplier)
+    return Money.new(@amount * multiplier, @currency)
   end
 
 end
@@ -32,7 +32,7 @@ end
 class Franc < Money
 
   def times(multiplier)
-    return Money.franc(@amount * multiplier)
+    return Money.new(@amount * multiplier, @currency)
   end
 
 end

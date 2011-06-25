@@ -29,6 +29,3 @@ class Money
   end
 
 end
-
-class Franc < Money
-end

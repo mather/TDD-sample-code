@@ -44,12 +44,6 @@ describe "等価性" do
     it("$5 != 5 CHF") { Money.dollar(5).should_not == Money.franc(5) }
   end
 
-  context "異なるクラス、同じ通貨" do
-    it("10 CHF(Franc) == 10 CHF(Money)") {
-      Franc.new(10,"CHF").should == Money.new(10,"CHF")
-    }
-  end
-
 end
 
 

@@ -33,12 +33,26 @@ describe Franc do
 end
 
 describe "等価性" do
-  it("$5 == $5") { Money.dollar(5).should == Money.dollar(5) }
-  it("$5 != $6") { Money.dollar(5).should_not == Money.dollar(6) }
-  it("5 CHF == 5 CHF") { Money.franc(5).should == Money.franc(5) }
-  it("5 CHF != 6 CHF") { Money.franc(5).should_not == Money.franc(6) }
-  it("$5 != 5 CHF") { Money.dollar(5).should_not == Money.franc(5) }
+  context "同じクラス" do
+    it("$5 == $5") { Money.dollar(5).should == Money.dollar(5) }
+    it("$5 != $6") { Money.dollar(5).should_not == Money.dollar(6) }
+    it("5 CHF == 5 CHF") { Money.franc(5).should == Money.franc(5) }
+    it("5 CHF != 6 CHF") { Money.franc(5).should_not == Money.franc(6) }
+  end
+
+  context "異なる通貨" do
+    it("$5 != 5 CHF") { Money.dollar(5).should_not == Money.franc(5) }
+  end
+
+  context "異なるクラス、同じ通貨" do
+    it("10 CHF(Franc) == 10 CHF(Money)") {
+      Franc.new(10,"CHF").should == Money.new(10,"CHF")
+    }
+  end
+
 end
+
+
 
 describe "通貨" do
   it("Dollar's currency is 'USD'") { Money.dollar(1).currency.should == "USD" }

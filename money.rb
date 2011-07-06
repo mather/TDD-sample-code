@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 class Money
-  attr_reader :amount, :currency
+
+  attr_reader :currency
 
   def initialize(amount, currency)
     @amount = amount
@@ -9,7 +10,7 @@ class Money
   end
 
   def ==(other)
-    self.currency == other.currency and @amount == other.amount
+    @currency == other.currency and @amount == other.amount
   end
 
   def Money.dollar(amount)
@@ -21,11 +22,15 @@ class Money
   end
 
   def times(multiplier)
-    return Money.new(@amount * multiplier, @currency)
+    Money.new(@amount * multiplier, @currency)
   end
 
+  protected
+
+  attr_reader :amount
+
   def inspect
-    "#{@amount} #{@currency}(#{self.class})"
+    "#{@amount} #{@currency}"
   end
 
 end
